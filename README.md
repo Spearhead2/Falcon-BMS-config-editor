@@ -2,6 +2,8 @@
 
 A desktop app built with **Tauri** (Rust + HTML/JS) for editing `falcon bms.cfg` files through a clean GUI.
 
+<img src="images/screenshot.png" width="870">
+
 ## Prerequisites
 
 1. **Rust** - https://rustup.rs
