@@ -1,0 +1,91 @@
+:root {
+  --bg: #191c1d;
+  --bg2: #2c3031;
+  --bg3: #3d474b;
+  --bg4: #4d5c61;
+  --border: rgba(255, 255, 255, 0.08);
+  --border2: rgba(255, 255, 255, 0.14);
+  --text: #c5dce6;
+  --text2: #a0b6c0;
+  --text3: #82a0ad;
+  --accent: #47a4cf;
+  --accent2: #3485aa;
+  --accent-glow: rgba(74, 143, 212, 0.247);
+  --green: #1fcc72;
+  --amber: #f89639;
+  --red: #ec3f3f;
+  --purple: #8d5ccc;
+  --teal: #33ccb8;
+  --font: monospace;
+  --font-ui: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  font-size: 16px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+
+/* ── SPINNER ── */
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--border2);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── BUTTONS ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: 1px solid var(--border2);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--font-ui);
+  transition: background 0.1s, border-color 0.1s;
+}
+.btn:hover { background: var(--bg4); border-color: rgba(255,255,255,0.2); }
+.btn:active { transform: scale(0.97); }
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+.btn-primary:hover { background: var(--accent2); border-color: var(--accent2); }
+
+.btn-success {
+  background: rgba(61,186,122,0.15);
+  border-color: rgba(61,186,122,0.4);
+  color: var(--green);
+}
+.btn-success:hover { background: rgba(61,186,122,0.25); }
+
+.btn-danger {
+  background: rgba(224,85,85,0.15);
+  border-color: rgba(224,85,85,0.4);
+  color: var(--red);
+}
+.btn-danger:hover { background: rgba(224,85,85,0.25); }
