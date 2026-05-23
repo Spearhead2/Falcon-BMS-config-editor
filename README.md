@@ -20,7 +20,7 @@ A desktop app built with **Tauri** (Rust + HTML/JS) for editing `falcon bms.cfg`
 
 ## Setup & Run
 
-[**Download Current Release (v0.1.0)**](https://github.com/Spearhead2/Falcon-BMS-config-editor/releases/tag/v0.1.0)
+[**Download Current Release (v0.1.2)**](https://github.com/Spearhead2/Falcon-BMS-config-editor/releases/tag/v0.1.2)
 
 or 
 
