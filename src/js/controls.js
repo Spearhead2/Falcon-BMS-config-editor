@@ -1,4 +1,4 @@
-// ── CONTROL BUILDER ───────────────────────────────────────────────────────────
+// CONTROL BUILDER 
 // Returns an HTML string for the appropriate input control given a schema entry.
 
 function buildControl(key, schema, val, orig) {
@@ -82,7 +82,7 @@ function buildControl(key, schema, val, orig) {
   }
 }
 
-// ── VALUE UPDATE ──────────────────────────────────────────────────────────────
+// VALUE UPDATE 
 
 function updateValue(key, newVal) {
   state.currentValues[key] = String(newVal);

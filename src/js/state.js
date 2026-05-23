@@ -1,4 +1,4 @@
-// ── TAURI API ─────────────────────────────────────────────────────────────────
+// TAURI API 
 let tauriInvoke = null;
 let tauriDialog = null;
 
@@ -22,7 +22,7 @@ let tauriDialog = null;
   }
 })();
 
-// ── APP STATE ─────────────────────────────────────────────────────────────────
+// APP STATE 
 let state = {
   filePath:       null,
   rawLines:       [],

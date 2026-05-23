@@ -1,4 +1,4 @@
-// ── NAV ───────────────────────────────────────────────────────────────────────
+// NAV 
 
 function renderNav() {
   const nav      = document.getElementById('nav-list');
@@ -23,7 +23,7 @@ function renderNav() {
   });
 }
 
-// ── SECTION ───────────────────────────────────────────────────────────────────
+// SECTION 
 
 function showSection(sec) {
   state.activeSection = sec;
@@ -40,7 +40,7 @@ function filterSettings(query) {
   renderSettings();
 }
 
-// ── SETTINGS GRID ─────────────────────────────────────────────────────────────
+// SETTINGS GRID 
 
 function renderSettings() {
   const grid    = document.getElementById('settings-grid');
@@ -78,7 +78,7 @@ function renderSettings() {
   updateModifiedCount();
 }
 
-// ── CARD BUILDER ──────────────────────────────────────────────────────────────
+// CARD BUILDER 
 
 function buildCard(entry) {
   const schema     = SCHEMA[entry.key] || { type: 'text' };

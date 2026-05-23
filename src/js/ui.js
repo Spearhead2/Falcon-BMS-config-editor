@@ -1,4 +1,4 @@
-// ── STATUS BAR ────────────────────────────────────────────────────────────────
+// STATUS BAR 
 
 function setStatus(msg, type) {
   document.getElementById('status-text').textContent = msg;
@@ -6,21 +6,24 @@ function setStatus(msg, type) {
   dot.className = 'status-dot' + (type ? ' ' + type : '');
 }
 
-// ── TOAST ─────────────────────────────────────────────────────────────────────
+// TOAST 
 
 let toastTimer;
 
 function showToast(msg, type = '') {
+  clearTimeout(toastTimer);
   const t = document.getElementById('toast');
   t.textContent = msg;
   t.className = 'toast' + (type ? ' ' + type : '');
-  void t.offsetWidth; // force reflow to restart animation
+  void t.offsetWidth;
   t.classList.add('show');
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => t.classList.remove('show'), 2500);
+  console.log('hiding toast');
+  toastTimer = setTimeout(() => {
+    document.getElementById('toast').className = 'toast';
+  }, 2500);
 }
 
-// ── MODIFIED COUNT ────────────────────────────────────────────────────────────
+// MODIFIED COUNT 
 
 function updateModifiedCount() {
   const count = Object.entries(state.currentValues)

@@ -1,4 +1,4 @@
-// ── ADD SETTING MODAL ─────────────────────────────────────────────────────────
+// ADD SETTING MODAL 
 
 let addCurrentType = 'bool';
 let addBoolValue   = '1';
@@ -18,8 +18,8 @@ function renderValArea() {
     case 'bool':
       area.innerHTML = `
         <div class="val-bool-row">
-          <div class="bool-opt ${addBoolValue === '1' ? 'selected' : ''}" onclick="setBoolVal('1')">1 — true / on</div>
-          <div class="bool-opt ${addBoolValue === '0' ? 'selected' : ''}" onclick="setBoolVal('0')">0 — false / off</div>
+          <div class="bool-opt ${addBoolValue === '1' ? 'selected' : ''}" onclick="setBoolVal('1')">1 - true / on</div>
+          <div class="bool-opt ${addBoolValue === '0' ? 'selected' : ''}" onclick="setBoolVal('0')">0 - false / off</div>
         </div>`;
       break;
     case 'int':
@@ -173,5 +173,5 @@ function commitAddSetting() {
   }, 80);
 
   showToast(`Added: ${key}`, 'success');
-  setStatus('New setting added — remember to save', 'warn');
+  setStatus('New setting added - remember to save', 'warn');
 }

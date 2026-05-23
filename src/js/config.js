@@ -1,4 +1,4 @@
-// ── OPEN FILE ─────────────────────────────────────────────────────────────────
+// OPEN FILE 
 
 async function openFile() {
   if (!tauriDialog) { loadDemoData(); return; }
@@ -15,7 +15,7 @@ async function openFile() {
   }
 }
 
-// ── LOAD CONFIG ───────────────────────────────────────────────────────────────
+// LOAD CONFIG 
 
 function loadConfig(path, config) {
   state.filePath       = path;
@@ -38,14 +38,14 @@ function loadConfig(path, config) {
   document.getElementById('btn-add').disabled   = false;
 
   document.getElementById('status-path').textContent = path || 'Demo mode';
-  setStatus('Config loaded — ' + config.entries.length + ' settings', 'ok');
+  setStatus('Config loaded - ' + config.entries.length + ' settings', 'ok');
   document.getElementById('status-count').textContent = config.entries.length + ' settings';
 
   renderNav();
   showSection('All');
 }
 
-// ── SAVE FILE ─────────────────────────────────────────────────────────────────
+// SAVE FILE 
 
 async function saveFile() {
   if (!state.filePath) { showToast('No file loaded', 'error'); return; }
@@ -77,7 +77,7 @@ async function saveFile() {
   }
 }
 
-// ── RESET ─────────────────────────────────────────────────────────────────────
+// RESET 
 
 function resetChanges() {
   Object.assign(state.currentValues, state.originalValues);
@@ -85,7 +85,7 @@ function resetChanges() {
   showToast('All changes reset', '');
 }
 
-// ── DEMO DATA ─────────────────────────────────────────────────────────────────
+// DEMO DATA 
 
 function loadDemoData() {
   const demoEntries = [
@@ -95,7 +95,7 @@ function loadDemoData() {
     { key: 'g_fDefaultFOV',                 value: '60',           comment: 'Default field of view in degrees',                line_index: 25  },
     { key: 'g_bHdrLighting',                value: '1',            comment: 'Enables HDR lighting',                           line_index: 40  },
     { key: 'g_bShadowMapping',              value: '1',            comment: 'Enables shadow mapping',                         line_index: 47  },
-    { key: 'g_nVRHMD',                      value: '0',            comment: 'VR mode — 0: disabled; 1: SteamVR; 2: OpenXR',   line_index: 250 },
+    { key: 'g_nVRHMD',                      value: '0',            comment: 'VR mode - 0: disabled; 1: SteamVR; 2: OpenXR',   line_index: 250 },
     { key: 'g_fVRResolution',               value: '1.0',          comment: 'VR resolution multiplier',                       line_index: 255 },
     { key: 'g_nDynamicVoices',              value: '128',          comment: 'Maximum number of voices for the sound system',  line_index: 99  },
     { key: 'g_bEnableTTS',                  value: '1',            comment: 'Globally enables Text-To-Speech (TTS)',           line_index: 211 },
@@ -118,5 +118,5 @@ function loadDemoData() {
     'C:\\Falcon BMS 4.38\\User\\Config\\falcon bms.cfg (DEMO)',
     { entries: demoEntries, raw_lines: [] }
   );
-  showToast('Running in preview mode — Tauri not detected', '');
+  showToast('Running in preview mode - Tauri not detected', '');
 }

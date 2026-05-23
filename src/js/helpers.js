@@ -1,4 +1,4 @@
-// ── COLOR HELPERS ─────────────────────────────────────────────────────────────
+// COLOR HELPERS 
 
 // Converts BMS "0xBBGGRR" or "0xAABBGGRR" to a CSS "#rrggbb" hex string
 function bmsColorToHex(val) {
@@ -31,7 +31,7 @@ function hexToBmsColor(hex, originalVal) {
   return isQuoted ? `"${result}"` : result;
 }
 
-// ── SECTION HELPERS ───────────────────────────────────────────────────────────
+// SECTION HELPERS 
 
 function getSection(key) {
   return SCHEMA[key]?.section || 'Other';
@@ -43,6 +43,6 @@ function getAllSections(entries) {
   return Array.from(sections);
 }
 
-// ── MISC ──────────────────────────────────────────────────────────────────────
+// MISC 
 
 function valToBool(val) { return val === '1'; }

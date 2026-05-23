@@ -1,4 +1,4 @@
-// ── DELETE SETTING MODAL ──────────────────────────────────────────────────────
+// DELETE SETTING MODAL 
 
 let pendingDeleteKey = null;
 
@@ -44,5 +44,5 @@ function commitDeleteSetting() {
   updateModifiedCount();
 
   showToast(`Removed: ${key}`, '');
-  setStatus('Setting removed — remember to save', 'warn');
+  setStatus('Setting removed - remember to save', 'warn');
 }
